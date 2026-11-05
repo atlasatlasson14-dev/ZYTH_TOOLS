@@ -128,7 +128,7 @@ class MainActivity : Activity() {
 
     private fun baseScreen(title: String, subtitle: String): LinearLayout {
         val scroll = ScrollView(this).apply {
-            setBackgroundColor(background)
+            setBackgroundColor(this@MainActivity.background)
             isFillViewport = true
             overScrollMode = View.OVER_SCROLL_IF_CONTENT_SCROLLS
         }
@@ -493,7 +493,7 @@ class MainActivity : Activity() {
             setTextColor(Color.WHITE)
             setHintTextColor(Color.rgb(130, 123, 145))
             textSize = 14f
-            singleLine = true
+            setSingleLine(true)
             setPadding(dp(14), dp(12), dp(14), dp(12))
             background = rounded(surfaceRaised, Color.rgb(65, 48, 85), 13f)
         }
