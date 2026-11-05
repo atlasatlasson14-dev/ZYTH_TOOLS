@@ -186,6 +186,9 @@ class MainActivity : Activity() {
 
         button("INSTALL APK", primary = true) { openApkPicker() }
         button("DOWNLOAD APK", primary = false) { downloadLatestApk() }
+        button("AI MOD BUILDER", primary = false) {
+            startActivity(Intent(this, AiModBuilderActivity::class.java))
+        }
         button("MOD MENU GENERATOR", primary = false) { showGenerator() }
 
         val note = card()
